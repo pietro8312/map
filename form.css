@@ -1,0 +1,101 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: no-repeat url(./bg-praia.jpg);
+    background-position: right;
+    background-size: cover;
+
+    height: 100dvh;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: transparent;
+    backdrop-filter: blur(14px);
+
+    border: 1px solid;
+
+    height: 75%;
+    width: 50%;
+
+    padding: 1rem;
+
+    border-radius: 20px;
+}
+
+form.login{
+    height: 70%;
+    padding: 2rem;
+}
+
+form h1{
+    display: flex;
+    justify-content: center;
+    color: rgba(34, 51, 68, 0.842);
+    width: 100%;
+}
+
+svg{
+    position: relative;
+    left: -10vw;    
+    height: 100%;
+    transform: rotate(180deg);
+}
+
+a{
+    height: 15%;
+}
+form input{
+    box-sizing: border-box;
+    
+    width: 100%;
+    height: 10%;
+
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+
+    border: none;
+    border-radius: 20px;
+}
+
+form p{
+    width: 100%;
+}
+
+form p a{
+    margin: 2rem 0 0 0;
+    color: #233355;
+    text-decoration: underline;
+}
+
+form p a:hover{
+    color: #13264e;
+}
+
+form #submit{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+
+    margin-top: 2rem;
+}
+
+form #submit button{
+    width: 30%;
+    height: 100%;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    background-color: #afafaf;
+}
+
+form input:hover, form #submit button:hover{
+    background-color: #8a8a8a;
+}

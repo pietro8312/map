@@ -1,0 +1,154 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgb(127, 208, 255);
+    height: 10dvh;
+    width: 100% !important;
+
+    padding: 0 3rem;
+}
+
+nav#desktop{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+
+nav#desktop a{
+    transition: .2s ease-out;
+    color: var(--header-font);
+    text-decoration: none;
+    padding: .5rem 1.5rem;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+nav#desktop a:hover{
+    background-color: #cecaca;
+}
+
+#ham{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+    width: 2.5rem;
+}
+
+#ham i{
+    height: 22%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+nav#cel{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+
+    width: 30%;
+    height: 100%;
+
+    right: 0;
+
+    background-color: tomato;
+}
+
+nav#cel.active{
+    display: flex;
+}
+
+section#bg{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    flex-direction: row;
+
+    height: 80dvh;
+    width: 100%;
+
+    background-image: url(bg-praia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+#btns{
+    display: flex;
+    justify-content: space-between;
+    width: 8%;
+
+    margin-bottom: 1rem;
+}
+
+section#bg button{
+    height: 1.5rem;
+    width: 1.5rem;
+
+    border-radius: 100%;
+    border: none;
+}
+
+section#bg button.active{
+    background-color: #cecaca;
+}
+
+section#bg button:hover{
+    transform: scale(110%);
+    background-color: #868686;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+#map{
+    display: flex;
+    flex-direction: row;
+
+    height: 60dvh;
+    width: 80%;
+
+    padding-right: 1.5rem;
+
+    margin: 4rem 0;
+    background-color: aqua;
+}
+
+#map #nav-map{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    height: 100%;
+    width: 20%;
+
+    background-color: rebeccapurple;
+}
+
+#nav-map h1{
+    padding-left: .5rem;
+
+    margin-bottom: 2rem;
+
+    border-bottom: 1px solid;
+}
+#nav-map h1:hover{
+
+}
+
+@media (max-width:768px){
+    nav#desktop{
+        display: none;
+    }
+
+    #ham{
+        display: flex;
+    }
+}
