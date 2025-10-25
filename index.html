@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
+
     <script src="main.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>MAC</h1>
+        <h1>MAC: Marcação de Anomalias Coesteiras</h1>
         <nav id="desktop">
             <a href="./cadastre.html">Cadastre-se</a>
             <a href="./login.html">Login</a>
@@ -37,12 +44,28 @@
             <button data-bg="2"></button>
         </span>        
     </section>
+    <section id="resumo">O que é o MAC? Ele é um projeto desenvolvido durante a Hackathon 2025,
+         modalidade da 9° Edição Charcode - evento realizado no IFSUL Charqueadas. Seu nome é Marcação de Anomalias Costeiras,
+          e seu intuito é de população adicionar pontos importantes em regiões próximas ou não muito longe do litoral, que são incomuns,
+           ou prejudiciais, como animais mortos, derramamento de petróleo, ressacas, etc. Assim, as autoridades responsáveis podem 
+           resolvê-los, ou, alertar a população por meio de avisos oficiais, tal qual os climáticos que já existem. O projeto não tem o 
+           intuito de resolver nenhum problema diretamente, ele é uma ferramenta auxiliar para que os problemas avistados pelos moradores 
+           do lugar apontado possam comunicar os problemas avistados,
+            facilitando as informações para órgãos e instituições ambientais ligados ao projeto
+    </section>
     <main>
-        <section id="map">
-            <span id="nav-map">
-                <h1>Regiões</h1>
-                <h1>Alertas</h1>
-            </span>
+        <section id="mapa">
+
+            <form id="nav-map">
+            <div>
+                <input type="number" id="lat" placeholder="Latitude" step="any" required>
+                <input type="number" id="lng" placeholder="Longitude" step="any" required>
+                <button type="button" id="selecionar">📍 Selecionar no mapa</button>
+            </div>
+
+            <button type="submit">Adicionar ponto</button>
+            </form>
+            <div id="map"></div>
         </section>
     </main>
 </body>
