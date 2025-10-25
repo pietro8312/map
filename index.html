@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mapa.css">
 
     <script src="main.js" defer></script>
     <title>Document</title>
@@ -55,16 +56,23 @@
     </section>
     <main>
         <section id="mapa">
-
-            <form id="nav-map">
-            <div>
+            <div id="nav-map">
+                <input type="text" id="titulo" placeholder="Titulo">
                 <input type="number" id="lat" placeholder="Latitude" step="any" required>
                 <input type="number" id="lng" placeholder="Longitude" step="any" required>
+                    <select id="cor">
+                        <option value="default">Tipo de Alerta</option>
+                        <option value="red">Vermelho</option>
+                        <option value="blue">Azul</option>
+                        <option value="yellow">Amarelo</option>
+                        <option value="black">Preto</option>
+                        <option value="pink">Rosa</option>
+                        <option value="grey">Cinza</option>
+                    </select>
                 <button type="button" id="selecionar">📍 Selecionar no mapa</button>
+                <button type="submit" id="submit">Adicionar ponto</button>
             </div>
 
-            <button type="submit">Adicionar ponto</button>
-            </form>
             <div id="map"></div>
         </section>
     </main>

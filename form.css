@@ -17,7 +17,7 @@ form{
     flex-direction: column;
 
     background-color: transparent;
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(30px);
 
     border: 1px solid;
 
@@ -67,6 +67,10 @@ form input{
 
 form p{
     width: 100%;
+    background-color: white;
+    width: auto;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 form p a{
