@@ -13,15 +13,24 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="mapa.css">
 
-    <script src="main.js" defer></script>
-    <title>Document</title>
+    <!-- form.js is imported by main.js as a module; don't load it twice or as a classic script -->
+    <script type="module" src="main.js" defer></script>
+    <script src="maps.js" defer></script>
+    <title>MAC: menu-principal</title>
 </head>
 <body>
     <header>
         <h1>MAC: Marcação de Anomalias Coesteiras</h1>
+
         <nav id="desktop">
+            <h3 id="adm">Admin <img src="admicone.svg" alt="Imagem Padrão Imagem"></h3>
+            <h3 id="comum"><p>XXX.XXX@gmail.com</p><div id="ftperfil">XX</div></h3>
+
+
             <a href="./cadastre.html">Cadastre-se</a>
             <a href="./login.html">Login</a>
+        </nav>
+
         </nav>
 
         <span id="ham">
@@ -39,6 +48,7 @@
         <a href="">Teste</a>
     </nav>
     <section id="bg">
+        <h3>Bem vindo ao MAC!</h3>
         <span id="btns">
             <button data-bg="0"></button>
             <button data-bg="1"></button>
@@ -58,22 +68,27 @@
         <section id="mapa">
             <div id="nav-map">
                 <input type="text" id="titulo" placeholder="Titulo">
+                <button type="button" id="selecionar">📍 Selecionar no mapa</button>
+                <select id="cor">
+                    <option value="default">Tipo de Alerta</option>
+                    <option value="red">Outros</option>
+                    <option value="blue">Ressaca</option>
+                    <option value="yellow">Animal</option>
+                    <option value="black">Poluição</option>
+                    <option value="pink">Fenomenos Climaticos</option>
+                </select>
                 <input type="number" id="lat" placeholder="Latitude" step="any" required>
                 <input type="number" id="lng" placeholder="Longitude" step="any" required>
-                    <select id="cor">
-                        <option value="default">Tipo de Alerta</option>
-                        <option value="red">Vermelho</option>
-                        <option value="blue">Azul</option>
-                        <option value="yellow">Amarelo</option>
-                        <option value="black">Preto</option>
-                        <option value="pink">Rosa</option>
-                        <option value="grey">Cinza</option>
-                    </select>
-                <button type="button" id="selecionar">📍 Selecionar no mapa</button>
                 <button type="submit" id="submit">Adicionar ponto</button>
             </div>
 
-            <div id="map"></div>
+            <div id="map">
+                <i id="menu">
+                    <h1>titulo</h1>
+                    <p>Latitude</p>
+                    <p>Longitude</p>
+                </i>
+            </div>
         </section>
     </main>
 </body>
